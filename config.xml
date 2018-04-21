@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+    <widget 
+        id="SzafaGra" 
+        version="1.0.0" 
+        xmlns="http://www.w3.org/ns/widgets" 
+        xmlns:cdv="http://cordova.apache.org/ns/1.0">
+        
+        <name>Szafa Gra</name>
+        
+        <description>
+            Aplikacja ma na celu wspomaganie podejmowania decyzji co do codziennego ubioru. 
+        </description>
+        
+        <author email="dev@cordova.apache.org" href="http://cordova.io">
+            Apache Cordova Team
+        </author>
+
+        <content src="index.html" />
+        
+        <plugin name="cordova-plugin-splashscreen" spec="~5.0.2" />
+        <plugin name="cordova-plugin-camera" spec="~4.0.3" />
+           
+        <platform name="android" >
+            <allow-intent href="market:*" />
+            <preference name="android-minSdkVersion" value="14" />
+            <preference name="android-targetSdkVersion" value="22" />
+            <preference name="SplashScreen" value="splash" />
+            <preference name="SplashScreenDelay" value="3000" />
+            <preference name="ShowSplashScreenSpinner" value="false" />
+            <preference name="FadeSplashScreen" value="false" />
+            <preference name="SplashMaintainAspectRatio" value="true" />
+            <preference name="SplashShowOnlyFirstTime" value="false" />
+            <preference name="SplashShowOnlyFirstTime" value="false" />
+
+            <splash qualifier="land-mdpi" src="res/drawable-mdpi/splash.png" />
+            <splash qualifier="land-hdpi" src="res/drawable-hdpi/splash.png" />
+            <splash qualifier="land-xhdpi" src="res/drawable-xhdpi/splash.png" />
+            <splash qualifier="land-xxhdpi" src="res/drawable-xxhdpi/splash.png" />
+            <splash qualifier="land-xxxhdpi" src="res/drawable-xxxhdpi/splash.png" />
+            <splash qualifier="port-mdpi" src="res/drawable-mdpi/splash.png" />
+            <splash qualifier="port-hdpi" src="res/drawable-hdpi/splash.png" />
+            <splash qualifier="port-xhdpi" src="res/drawable-xhdpi/splash.png" />
+            <splash qualifier="port-xxhdpi" src="res/drawable-xxhdpi/splash.png" />
+            <splash qualifier="port-xxxhdpi" src="res/drawable-xxxhdpi/splash.png" />
+
+            
+            <icon src="res/drawable-mdpi/icon.png" density="mdpi" />
+            <icon src="res/drawable-hdpi/icon.png" density="hdpi" />
+            <icon src="res/drawable-xhdpi/icon.png" density="xhdpi" />
+            <icon src="res/drawable-xxhdpi/icon.png" density="xxhdpi" />
+            <icon src="res/drawable-xxxhdpi/icon.png" density="xxxhdpi" />      
+        </platform>
+    </widget>
