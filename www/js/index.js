@@ -13,6 +13,14 @@ function setOptions(srcType) {
     return options;
 }
 
+window.addEventListener("batterystatus", onBatteryStatus, false);
+
+function onBatteryStatus(status) {
+    alert("Level: " + status.level + " isPlugged: " + status.isPlugged);
+}
+
+
+
 function openCamera(selection) {
  
     var srcType = Camera.PictureSourceType.CAMERA;
