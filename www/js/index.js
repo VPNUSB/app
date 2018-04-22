@@ -1,5 +1,6 @@
-
-navigator.camera.getPicture(onSuccess, onFail, { quality: 50, 
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    navigator.camera.getPicture(onSuccess, onFail, { quality: 50, 
     destinationType: Camera.DestinationType.DATA_URL});
 function onSuccess(imageData){
     var image = document.getElementById('imageFile');
@@ -8,4 +9,5 @@ function onSuccess(imageData){
 }
 function onFail(message){
     alert("fail " + message);
+}
 }
