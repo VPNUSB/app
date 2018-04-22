@@ -20,13 +20,13 @@ function openCamera(selection) {
     var func = createNewFileEntry;
  
     navigator.camera.getPicture(function cameraSuccess(imageUri) {
- 
+        alert("Usucess")
         displayImage(imageUri);
         // You may choose to copy the picture, save it somewhere, or upload.
         //func(imageUri);
  
     }, function cameraError(error) {
-        console.debug("Unable to obtain picture: " + error, "app");
+        alert("Unable to obtain picture: " + error);
  
     }, options);
 }
