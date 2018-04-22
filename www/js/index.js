@@ -1,3 +1,18 @@
+
+document.addEventListener("offline", onOffline, false);
+document.addEventListener("online", onOnline, false);
+
+function onOffline() {
+   alert('You are now offline!');
+};
+
+function onOnline() {
+   alert('You are now online!');
+};
+
+
+
+
 function setOptions(srcType) {
     var options = {
         // Some common settings are 20, 50, and 100
@@ -11,14 +26,7 @@ function setOptions(srcType) {
         correctOrientation: true  //Corrects Android orientation quirks
     }
     return options;
-}
-
-window.addEventListener("batterystatus", onBatteryStatus, false);
-
-function onBatteryStatus(status) {
-    alert("Level: " + status.level + " isPlugged: " + status.isPlugged);
-}
-
+};
 
 
 function openCamera(selection) {
@@ -37,10 +45,10 @@ function openCamera(selection) {
         alert("Unable to obtain picture: " + error);
  
     }, options);
-}
+};
 
 function displayImage(imgUri) {
  
     var elem = document.getElementById('imageFile');
     elem.src = imgUri;
-}
+};
