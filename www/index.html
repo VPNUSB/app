@@ -13,15 +13,29 @@
         <title>Szafa Gra</title>
     </head>
     <body>
-        <div >
-            <h1>Apache Cordova</h1>
-            <div id="deviceready">
-              
-            </div>
-            <div>
-            	<img  src="" id="imageFile" width="80">
-            </div>
-        </div>
+        <input id="city"></input>
+	<button id="getWeather"> get weather</button>
+	<div id="show">
+
+	</div>
+
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#getWeather").click(function(){
+				var city = $("#city").val();
+				var key = '33dbe3b930c23ad2c7a0630b49f3e440';	
+				
+				$.get('http://api.openweathermap.org/data/2.5/weather', {q:city, appid:key, units: 'metric'},  function(data) {
+						var zm = '';
+						$.each(data.weather, function(index, val){
+							zm += '<p><b>' + data.name + "</b></p>" + data.main.temp + '&deg;C' + '|' + val.main + ", " + val.description
+						});
+						$("#show").html(zm);
+					}, 'json');			
+			});
+		});
+	</script>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
     </body>
